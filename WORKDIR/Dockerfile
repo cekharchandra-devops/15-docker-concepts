@@ -7,3 +7,4 @@ CMD [ "sleep", "100" ]
 
 #  find / -iname "docker.txt"
 # it actually copies the file to the root directory of the container
+# WORKDIR will change the directory to /tmp/docker
