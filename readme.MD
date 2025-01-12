@@ -44,6 +44,14 @@ docker exec -it bash/sh ==> to login to running container
 
 docker run -d -p 8081:80 nginx:latest --> container runs on port 80 
 
+docker build -t <image-name>:version
+
+docker login -u <username>
+password:
+
+docker tag cmd:v1 cekharch/cmd:v1
+
+docker push cekharch/cmd:v1
 
 ```
 
@@ -78,3 +86,15 @@ Host (eth0:8081) --> Docker Bridge (docker0) --> Container (172.17.0.2:80)
 ```
 
 d. **Service Listening** Inside the container, the Nginx server listens on port 80. The port mapping ensures that requests reaching localhost:8081 on the host are directed to port 80 in the container.
+
+
+
+Docker Instructions:
+
+FROM --> should be the first instruction to refer to the base os except ARG
+RUN --> used to install packages and configure the images. this will execute at the time of image building
+CMD --> executes at the time of container creation time.
+EXPOSE --> it will give the metadata about which port the container is running on.
+LEBEL --> helps to add key value pair to image metadata and helps to filter the iamges
+COPY --> it will copy the files from source to destination
+ADD --> it has two extra capabilities. it can copy the files to destination directly from internet locations and it can also copy tar files and extract it at destination location.
