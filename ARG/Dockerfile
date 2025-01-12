@@ -1,5 +1,5 @@
 ARG version
-FROM almalinux:${version:-10}
+FROM almalinux:${version:-9}
 ARG course="devops" \
     author="sekhar"\
     email="xyz.gmail.com"
