@@ -1,4 +1,5 @@
-FROM almalinux:9
+ARG version
+FROM almalinux:${version:-10}
 ARG course="devops" \
     author="sekhar"\
     email="xyz.gmail.com"
@@ -10,3 +11,7 @@ CMD [ "sleep", "100" ]
 # it is similar to ENV but the values are not available during the container runtime.
 # values are only available during the build process.
 # for ENV values are available in the container as well as during the build process.
+# docker build -t arg:v1 --build-arg course=aws .
+# we can override the default values of ARG during the build process.
+
+# we can also use AGRS in the FROM instruction.
