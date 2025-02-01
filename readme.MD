@@ -98,3 +98,8 @@ EXPOSE --> it will give the metadata about which port the container is running o
 LEBEL --> helps to add key value pair to image metadata and helps to filter the iamges
 COPY --> it will copy the files from source to destination
 ADD --> it has two extra capabilities. it can copy the files to destination directly from internet locations and it can also copy tar files and extract it at destination location.
+
+RUN VS CMD
+ADD VS COPY
+CMD vs ENTRYPOINT
+
